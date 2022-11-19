@@ -1,5 +1,5 @@
 import { Component, createRef } from 'react';
-import './item-editing-task.css';
+import './itemEditingTask.css';
 import PropTypes from 'prop-types';
 
 class ItemEditingTask extends Component {

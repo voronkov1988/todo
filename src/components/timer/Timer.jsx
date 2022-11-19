@@ -1,4 +1,4 @@
-import './timer.css';
+import './Timer.css';
 import { Component } from 'react';
 import PropTypes from 'prop-types';
 import className from 'classnames';

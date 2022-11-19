@@ -1,5 +1,5 @@
 import { Component, createRef } from 'react';
-import './item-add-task.css';
+import './itemAddTask.css';
 import PropTypes from 'prop-types';
 import className from 'classnames';
 
@@ -80,7 +80,7 @@ class ItemAddTask extends Component {
             value={sec}
             onChange={this.handleChangeTime}
           />
-          <button type="submit" aria-label="submit" style={{ display: 'none' }} />
+          <button title="submit" type="submit" aria-label="submit" style={{ display: 'none' }} />
         </form>
       </header>
     );

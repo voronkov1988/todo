@@ -1,4 +1,4 @@
-import './tasks-filter.css';
+import './TasksFilter.css';
 import PropTypes from 'prop-types';
 import className from 'classnames';
 

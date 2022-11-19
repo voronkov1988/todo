@@ -1,7 +1,7 @@
-import './footer.css';
+import './Footer.css';
 import PropTypes from 'prop-types';
 
-import TasksFilter from '../tasks-filter';
+import TasksFilter from '../tasksFilter/TasksFilter';
 
 function Footer({ onFilterChange, filter, onClearCompletedTasks, isCompletedTasksCounter }) {
   return (

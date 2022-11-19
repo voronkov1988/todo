@@ -1,8 +1,8 @@
-import './task-list.css';
+import './TaskList.css';
 import className from 'classnames';
 import PropTypes from 'prop-types';
 
-import Task from '../task';
+import Task from '../task/Task';
 
 function TaskList({ todos, onDeleted, onToggleDone, onEditing, onFormatLabel, onUpdateTime }) {
   const listItems = todos.map(({ id, done, editing, label, time }) => (
