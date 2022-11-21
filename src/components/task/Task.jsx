@@ -1,8 +1,8 @@
-import './task.css';
+import './Task.css';
 import PropTypes from 'prop-types';
 
-import ItemEditingTask from '../itemEditingTask/itemEditingTask';
-import Timer from '../timer/Timer';
+import ItemEditingTask from '../ItemEditingTask/ItemEditingTask';
+import Timer from '../Timer/Timer';
 
 function Task(props) {
   const {

@@ -2,9 +2,9 @@ import { Component } from 'react';
 import './App.css';
 import { formatDistanceToNow } from 'date-fns';
 
-import TaskList from '../taskList/TaskList';
-import ItemAddTask from '../itemAddTask/itemAddTask';
-import Footer from '../footer/Footer';
+import TaskList from '../TaskList/TaskList';
+import ItemAddTask from '../ItemAddTask/ItemAddTask';
+import Footer from '../Footer/Footer';
 
 const data = {
   todoData: [

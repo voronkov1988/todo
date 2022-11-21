@@ -1,9 +1,9 @@
-import { Component, createRef } from 'react';
-import './itemEditingTask.css';
-import PropTypes from 'prop-types';
+import { Component, createRef } from "react";
+import "./ItemEditingTask.css";
+import PropTypes from "prop-types";
 
 class ItemEditingTask extends Component {
-  state = { value: '' };
+  state = { value: "" };
 
   refInput = createRef();
 
@@ -16,10 +16,10 @@ class ItemEditingTask extends Component {
   handleKeyDown = (e) => {
     const { value } = this.state;
     const { onFormatLabel, onEditing } = this.props;
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       onFormatLabel(value);
     }
-    if (e.key === 'Escape') {
+    if (e.key === "Escape") {
       onEditing();
     }
   };
@@ -50,7 +50,7 @@ class ItemEditingTask extends Component {
 }
 
 ItemEditingTask.defaultProps = {
-  label: 'Editing task',
+  label: "Editing task",
 };
 
 ItemEditingTask.propTypes = {
