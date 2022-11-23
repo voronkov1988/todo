@@ -1,10 +1,17 @@
-import { Component, createRef } from 'react';
-import './ItemAddTask.css';
-import PropTypes from 'prop-types';
-import className from 'classnames';
+import { Component, createRef } from "react";
+import "./ItemAddTask.css";
+import PropTypes from "prop-types";
+import className from "classnames";
 
 class ItemAddTask extends Component {
-  state = { label: '', min: '', sec: '', dirtyLabel: true, dirtyMin: false, dirtySec: false };
+  state = {
+    label: "",
+    min: "",
+    sec: "",
+    dirtyLabel: true,
+    dirtyMin: false,
+    dirtySec: false,
+  };
 
   textInput = createRef();
 
@@ -21,9 +28,9 @@ class ItemAddTask extends Component {
   };
 
   handleChangeTime = ({ target: { name, value } }) => {
-    const match = { min: 'dirtyMin', sec: 'dirtySec' };
+    const match = { min: "dirtyMin", sec: "dirtySec" };
     if (!Number.isInteger(Number(value)) && !value >= 0) {
-      this.setState({ [name]: value.replace(/\D/g, ''), [match[name]]: true });
+      this.setState({ [name]: value.replace(/\D/g, ""), [match[name]]: true });
       return;
     }
     if (value > 60) {
@@ -41,7 +48,14 @@ class ItemAddTask extends Component {
       return;
     }
     onAddTask(label, Number(min), Number(sec));
-    this.setState({ label: '', min: '', sec: '', dirtyLabel: true, dirtyMin: false, dirtySec: false });
+    this.setState({
+      label: "",
+      min: "",
+      sec: "",
+      dirtyLabel: true,
+      dirtyMin: false,
+      dirtySec: false,
+    });
     this.focusTextInput();
   };
 
@@ -65,7 +79,9 @@ class ItemAddTask extends Component {
             onChange={this.taskHandler}
           />
           <input
-            className={className('new-todo-form__timer', { 'new-todo-form__timer--error': dirtyMin })}
+            className={className("new-todo-form__timer", {
+              "new-todo-form__timer--error": dirtyMin,
+            })}
             type="text"
             placeholder="Min"
             name="min"
@@ -73,14 +89,21 @@ class ItemAddTask extends Component {
             onChange={this.handleChangeTime}
           />
           <input
-            className={className('new-todo-form__timer', { 'new-todo-form__timer--error': dirtySec })}
+            className={className("new-todo-form__timer", {
+              "new-todo-form__timer--error": dirtySec,
+            })}
             type="text"
             placeholder="Sec"
             name="sec"
             value={sec}
             onChange={this.handleChangeTime}
           />
-          <button title="submit" type="submit" aria-label="submit" style={{ display: 'none' }} />
+          <button
+            title="submit"
+            type="submit"
+            aria-label="submit"
+            style={{ display: "none" }}
+          />
         </form>
       </header>
     );
