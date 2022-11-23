@@ -1,14 +1,25 @@
-import './Footer.css';
-import PropTypes from 'prop-types';
+import "./Footer.css";
+import PropTypes from "prop-types";
 
-import TasksFilter from '../TasksFilter/TasksFilter';
+import TasksFilter from "../TasksFilter/TasksFilter";
 
-function Footer({ onFilterChange, filter, onClearCompletedTasks, isCompletedTasksCounter }) {
+function Footer({
+  onFilterChange,
+  filter,
+  onClearCompletedTasks,
+  isCompletedTasksCounter,
+}) {
   return (
     <footer className="footer">
-      <span className="todo-count">{isCompletedTasksCounter}&nbsp;items left</span>
+      <span className="todo-count">
+        {isCompletedTasksCounter}&nbsp;items left
+      </span>
       <TasksFilter onFilterChange={onFilterChange} filter={filter} />
-      <button type="button" className="clear-completed" onClick={onClearCompletedTasks}>
+      <button
+        type="button"
+        className="clear-completed"
+        onClick={onClearCompletedTasks}
+      >
         Clear completed
       </button>
     </footer>
@@ -16,7 +27,7 @@ function Footer({ onFilterChange, filter, onClearCompletedTasks, isCompletedTask
 }
 
 Footer.defaultProps = {
-  isCompletedTasksCounter: '$',
+  isCompletedTasksCounter: "$",
 };
 Footer.propTypes = {
   isCompletedTasksCounter: PropTypes.string,
